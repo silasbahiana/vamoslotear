@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vamos Lotear | Manual do Loteador</title>
+<meta name="description" content="Manual do Loteador: o passo a passo do loteamento, da gleba ao registro. Por Silas Bahiana, engenheiro civil, CREA-BA 89388/D.">
+<meta name="theme-color" content="#0f1b2d">
+<meta property="og:title" content="Manual do Loteador">
+<meta property="og:description" content="O passo a passo do loteamento, da gleba ao registro. De R$ 197 por R$ 97.">
+<meta property="og:image" content="curso.webp">
+<link rel="icon" href="mark.png">
+<link rel="preload" as="image" href="hero.webp" fetchpriority="high">
+<style>
+:root{--navy:#0f1b2d;--navy2:#16263e;--line:#25395a;--org:#f07c22;--org2:#ff9a45;--txt:#eef2f7;--mut:#a9b6c8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--navy);color:var(--txt);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:480px;margin:0 auto;padding:0 16px 40px}
+.hero{position:relative;margin:0 -16px;height:300px;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover;display:block}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,27,45,.15) 0%,rgba(15,27,45,.35) 45%,var(--navy) 100%)}
+.hero .tag{position:absolute;z-index:1;left:16px;bottom:18px;right:16px}
+.logo{height:36px;width:auto;display:block;margin-bottom:10px}
+.tag h1{font-size:26px;line-height:1.15;font-weight:800;letter-spacing:-.3px}
+.tag h1 b{color:var(--org)}
+.who{display:flex;gap:12px;align-items:center;margin:14px 0 18px}
+.who p{font-size:14px;color:var(--mut)}
+.who strong{color:var(--txt);display:block;font-size:15px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:22px}
+.stats div{background:var(--navy2);border:1px solid var(--line);border-radius:12px;padding:10px 6px;text-align:center}
+.stats b{display:block;font-size:20px;color:var(--org);font-weight:800}
+.stats span{font-size:12px;color:var(--mut)}
+.card{background:var(--navy2);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-bottom:16px}
+.card img{width:100%;height:auto;display:block;aspect-ratio:16/9}
+.card .in{padding:16px}
+.badge{display:inline-block;background:rgba(240,124,34,.15);color:var(--org2);font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;padding:4px 10px;border-radius:99px;margin-bottom:8px}
+.card h2{font-size:22px;line-height:1.2;margin-bottom:6px}
+.card p{color:var(--mut);font-size:15px}
+.price{display:flex;align-items:baseline;gap:10px;margin:14px 0 4px;flex-wrap:wrap}
+.price s{color:var(--mut);font-size:16px}
+.price b{font-size:30px;font-weight:800}
+.parc{font-size:14px;color:var(--mut);margin-bottom:14px}
+.btn{display:block;text-align:center;background:var(--org);color:#fff;font-weight:800;font-size:17px;padding:16px;border-radius:14px;box-shadow:0 6px 20px rgba(240,124,34,.35);transition:transform .15s}
+.btn:active{transform:scale(.98)}
+.btn2{display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);background:var(--navy2);color:var(--txt);font-weight:700;padding:14px;border-radius:14px;margin-bottom:12px}
+.safe{font-size:12px;color:var(--mut);text-align:center;margin-top:10px}
+h3{font-size:18px;margin:26px 0 10px}
+.mods{list-style:none;counter-reset:m}
+.mods li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}
+.mods li:last-child{border-bottom:0}
+.mods em{font-style:normal;font-weight:800;color:var(--org);min-width:26px}
+.gal{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 6px;scrollbar-width:none}
+.gal::-webkit-scrollbar{display:none}
+.gal figure{flex:0 0 62%;scroll-snap-align:start;position:relative;border-radius:14px;overflow:hidden}
+.gal img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;display:block;background:var(--navy2)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 10px 8px;font-size:13px;font-weight:600;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.hint{font-size:12px;color:var(--mut);margin-top:6px}
+.for{display:grid;gap:8px}
+.for div{background:var(--navy2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15px}
+.for b{color:var(--org2)}
+footer{margin-top:28px;text-align:center;font-size:12px;color:var(--mut)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <img src="hero.webp" width="960" height="640" alt="Vista aérea de loteamento com ruas abertas e lotes demarcados" fetchpriority="high">
+    <div class="tag">
+      <img class="logo" src="logo.webp" width="145" height="36" alt="Manual do Loteador">
+      <h1>Loteamento do jeito que acontece <b>na obra</b>, na prefeitura e no cartório.</h1>
+    </div>
+  </header>
+
+  <div class="who">
+    <p><strong>Silas Bahiana | Bahiana Urbanismo</strong>Engenheiro civil (UCSal), CREA-BA 89388/D</p>
+  </div>
+
+  <div class="stats">
+    <div><b>35+</b><span>loteamentos</span></div>
+    <div><b>5 mil+</b><span>lotes</span></div>
+    <div><b>10 mi m²</b><span>de área</span></div>
+  </div>
+
+  <a class="btn" href="https://pay.hotmart.com/I108453333Q?off=e7oyesr8&checkoutMode=10">Quero o Manual do Loteador</a>
+
+  <h3>O curso</h3>
+  <article class="card">
+    <img src="curso.webp" width="800" height="450" alt="Capa do curso Manual do Loteador" loading="lazy">
+    <div class="in">
+      <span class="badge">Preço de lançamento</span>
+      <h2>Manual do Loteador</h2>
+      <p>O passo a passo do loteamento, da gleba ao registro. Curso online em 11 módulos curtos, com 2 bônus e glossário.</p>
+      <div class="price"><s>R$ 197</s><b>R$ 97</b></div>
+      <div class="parc">ou 12x de R$ 10,03 no cartão. Pix e boleto também.</div>
+      <a class="btn" href="https://pay.hotmart.com/I108453333Q?off=e7oyesr8&checkoutMode=10">Garantir por R$ 97</a>
+      <div class="safe">Pagamento seguro pela Hotmart. Acesso imediato à área de membros.</div>
+    </div>
+  </article>
+
+  <h3>Para quem é</h3>
+  <div class="for">
+    <div><b>Tem uma área</b> e quer saber se vale lotear, vender ou fazer parceria.</div>
+    <div><b>Quer investir</b> e precisa entender onde o dinheiro entra e onde ele some.</div>
+    <div><b>Trabalha no setor</b> e conhece a sua parte, mas não o processo inteiro.</div>
+  </div>
+
+  <h3>Fotos de obra</h3>
+  <div class="gal">
+    <figure><img src="g1.webp" width="480" height="600" alt="Vista aérea de loteamento com primeira casa em construção" loading="lazy"><figcaption>Lotes demarcados e primeira casa</figcaption></figure>
+    <figure><img src="g2.webp" width="480" height="600" alt="Rua de loteamento com meio-fio" loading="lazy"><figcaption>Meio-fio assentado</figcaption></figure>
+    <figure><img src="g3.webp" width="480" height="600" alt="Bacia de drenagem do loteamento" loading="lazy"><figcaption>Drenagem</figcaption></figure>
+    <figure><img src="g4.webp" width="480" height="600" alt="Rua aberta em terra com lotes ao lado" loading="lazy"><figcaption>Abertura de ruas</figcaption></figure>
+    <figure><img src="g5.webp" width="480" height="600" alt="Rua de loteamento com cerca e postes" loading="lazy"><figcaption>Via de acesso</figcaption></figure>
+  </div>
+  <div class="hint">Arraste para o lado</div>
+
+  <h3>O que você vai aprender</h3>
+  <ol class="mods">
+    <li><em>00</em>O mapa do loteamento em uma página</li>
+    <li><em>01</em>O que é loteamento e o que não é</li>
+    <li><em>02</em>Como o dinheiro entra</li>
+    <li><em>03</em>Como escolher a gleba</li>
+    <li><em>04</em>Viabilidade em números</li>
+    <li><em>05</em>Projetos e aprovação</li>
+    <li><em>06</em>Registro em cartório</li>
+    <li><em>07</em>Obras de infraestrutura</li>
+    <li><em>08</em>Vendas e contratos</li>
+    <li><em>09</em>Os 10 erros que mais custam caro</li>
+    <li><em>10</em>Próximos passos</li>
+    <li><em>B1</em>Bônus: checklist de análise de gleba</li>
+    <li><em>B2</em>Bônus: roteiro da conta de viabilidade</li>
+  </ol>
+
+  <div style="margin-top:22px">
+    <a class="btn" href="https://pay.hotmart.com/I108453333Q?off=e7oyesr8&checkoutMode=10">Começar agora por R$ 97</a>
+  </div>
+  <div style="margin-top:12px">
+    <a class="btn2" href="https://ig.me/m/vamoslotear">Tirar dúvida no Direct</a>
+  </div>
+
+  <footer>Bahiana Urbanismo · @vamoslotear<br>Conteúdo educativo. Não substitui projeto, ART/RRT nem consulta à prefeitura e ao cartório.</footer>
+</div>
+</body>
+</html>
